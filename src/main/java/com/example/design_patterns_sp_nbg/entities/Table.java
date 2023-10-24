@@ -1,6 +1,5 @@
 package com.example.design_patterns_sp_nbg.entities;
-
-public class Table {
+public class Table implements element {
     private String title;
 
     public Table(String title) {

@@ -1,6 +1,6 @@
 package com.example.design_patterns_sp_nbg.entities;
 
-public class Paragraph {
+public class Paragraph implements element{
     private String text;
 
     public Paragraph(String text) {

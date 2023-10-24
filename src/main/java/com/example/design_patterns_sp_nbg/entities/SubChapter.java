@@ -4,41 +4,32 @@ import java.util.ArrayList;
 
 public class SubChapter {
     private String name;
-    private ArrayList<Image> images = new ArrayList<>();
-    private ArrayList<Paragraph> paragraphs = new ArrayList<>();
-    private ArrayList<Table> tables = new ArrayList<>();
+    private ArrayList<element> elements = new ArrayList<>();
 
     public SubChapter(String name) {
         this.name = name;
     }
 
-    public void createNewParagraph(String paragraphText) {
-        Paragraph paragraph = new Paragraph(paragraphText);
-        paragraphs.add(paragraph);
+    public void createNewParagraph(String text) {
+        Paragraph paragraph = new Paragraph(text);
+        elements.add(paragraph);
     }
 
     public void createNewImage(String imageName) {
         Image image = new Image(imageName);
-        images.add(image);
+        elements.add(image);
     }
 
     public void createNewTable(String title) {
         Table table = new Table(title);
-        tables.add(table);
+        elements.add(table);
     }
 
     public void print() {
         System.out.println("Subchapter: " + name);
-        for (Paragraph paragraph : paragraphs) {
-            paragraph.print();
-        }
-        for (Image image : images) {
-            image.print();
-        }
-        for (Table table : tables) {
-            table.print();
+        for (element element : elements) {
+            element.print();
         }
     }
-
 
 }
