@@ -14,4 +14,19 @@ public class Image implements Element {
     public void print() {
         System.out.println("Image: " + imageName);
     }
+
+    @Override
+    public void add(Element element) {
+
+    }
+
+    @Override
+    public void remove(Element element) {
+
+    }
+
+    @Override
+    public Element getElement(int index) {
+        return null;
+    }
 }
