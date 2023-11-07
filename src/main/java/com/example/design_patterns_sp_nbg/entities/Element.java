@@ -1,5 +1,5 @@
 package com.example.design_patterns_sp_nbg.entities;
 
-public interface element {
+public interface Element {
     void print();
 }

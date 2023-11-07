@@ -1,6 +1,6 @@
 package com.example.design_patterns_sp_nbg.entities;
 
-public class Image implements element{
+public class Image implements Element {
     private String imageName;
 
     public Image(String imageName) {
