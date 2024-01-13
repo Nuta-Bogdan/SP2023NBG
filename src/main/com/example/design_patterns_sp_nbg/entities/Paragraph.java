@@ -2,6 +2,7 @@ package com.example.design_patterns_sp_nbg.entities;
 
 public class Paragraph implements Element {
     private String text;
+    private AlignStrategy alignStrategy;
 
     public Paragraph(String text) {
         this.text = text;
@@ -12,7 +13,12 @@ public class Paragraph implements Element {
     }
 
     public void print() {
-        System.out.println("Paragraph: " + text);
+        if (alignStrategy == null) {
+            System.out.println("Paragraph: " + text);
+            return;
+        } else {
+            System.out.println("Paragraph: " + alignStrategy.render(this));
+        }
     }
 
     public void add(Element element) {
@@ -24,5 +30,9 @@ public class Paragraph implements Element {
 
     public Element getElement(int index) {
         return null;
+    }
+
+    public void setAlignStrategy(AlignStrategy alignStrategy) {
+        this.alignStrategy = alignStrategy;
     }
 }
